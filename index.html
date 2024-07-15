@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索フォーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>検索フォーム</h1>
+        <form id="searchForm">
+            <label for="scoreOrder">score→vote数順に並べる (1count):</label>
+            <input type="text" id="scoreOrder" name="scoreOrder">
+
+            <label for="sfwNsfw">is:sfw, nsfw=g,s+q,e (0count):</label>
+            <input type="text" id="sfwNsfw" name="sfwNsfw">
+
+            <label for="rating">rating:g,s,q,e (0count):</label>
+            <input type="text" id="rating" name="rating">
+
+            <label for="orCondition">or:どちらか、tag空白or空白tag (2count):</label>
+            <input type="text" id="orCondition" name="orCondition">
+
+            <label for="excludeTag">-tag (1count):</label>
+            <input type="text" id="excludeTag" name="excludeTag">
+
+            <label for="inverseTag">*tag:逆引き (1count):</label>
+            <input type="text" id="inverseTag" name="inverseTag">
+
+            <label for="commentary">commentary:"string" :コメント検索 (1count):</label>
+            <input type="text" id="commentary" name="commentary">
+
+            <label for="id">id (1count):</label>
+            <input type="text" id="id" name="id">
+
+            <label for="initialSearch">/string:空白、(、-などで区切られた頭文字で検索 (例: kemomimi-chan(naga u)=/kcnu):</label>
+            <input type="text" id="initialSearch" name="initialSearch">
+
+            <button type="button" onclick="submitForm()">検索</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
